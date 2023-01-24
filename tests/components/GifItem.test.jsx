@@ -21,4 +21,10 @@ describe('Añadir PropTypes', () => {
     expect(src).toBe(url)
     expect(alt).toBe(title)
     })
+
+    test('Debe de mostrar el titulo del componente', () => {
+       render(<GifItem title={ title } url={ url } />)
+       expect(screen.getByText(title)).toBeTruthy() //validamos que si exista
+    })
+    
 })
