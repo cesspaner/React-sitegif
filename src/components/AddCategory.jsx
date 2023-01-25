@@ -11,6 +11,7 @@ export const AddCategory = ({onNewCategory}) => {
     }
     
     const onSubmit =(event)=>{
+        // console.log('sec0-submit')
         event.preventDefault()
         // console.log(inputValue)
         if (inputValue.trim().length <= 1) return
@@ -20,7 +21,7 @@ export const AddCategory = ({onNewCategory}) => {
         setinputValue('')
     }
   return (
-    <form  onSubmit={onSubmit}>
+    <form  onSubmit={onSubmit} aria-label = "form">
       <input
       type="Text"
       placeholder = "Buscar Gif"
