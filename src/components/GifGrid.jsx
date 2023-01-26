@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types"
 import { useFethGifs } from "../hooks/useFethGifs"
 import { GifItem } from "./GifItem"
 import { LoadingMessage } from "./LoadingMessage"
@@ -25,4 +26,8 @@ const {images, isLoading} = useFethGifs(category)
       </div>
      </>
   )
+}
+
+GifGrid.propTypes = {
+  category : PropTypes.string.isRequired,
 }
